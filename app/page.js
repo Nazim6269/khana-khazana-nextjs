@@ -1,3 +1,9 @@
+import RecipeList from '@/components/recipe/RecipeList';
+
 export default function Home() {
-  return <>Hello</>;
+  return (
+    <>
+      <RecipeList />
+    </>
+  );
 }
