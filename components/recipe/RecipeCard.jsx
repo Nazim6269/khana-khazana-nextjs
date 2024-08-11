@@ -4,7 +4,7 @@ const RecipeCard = () => {
   return (
     <div className="card">
       <Image
-        src="https://source.unsplash.com/-YHSwy6uqvk/300x160"
+        src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_1280.jpg"
         className="rounded-md"
         width={300}
         height={160}
