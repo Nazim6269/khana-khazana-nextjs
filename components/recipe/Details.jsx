@@ -3,12 +3,12 @@ import Proceadure from './Proceadure';
 import Socials from '../socials/Socials';
 import DetailsInfo from './DetailsInfo';
 
-const Details = () => {
+const Details = ({ item }) => {
   return (
     <>
       <section>
         <div className="grid grid-cols-12 container gap-8 justify-items-center">
-          <DetailsInfo />
+          <DetailsInfo item={item} />
         </div>
       </section>
 
@@ -16,10 +16,9 @@ const Details = () => {
         <div className="container py-12">
           <h3 className="font-semibold text-xl py-6">How to Make it</h3>
           <div>
-            <Proceadure />
-            <Proceadure />
-            <Proceadure />
-            <Proceadure />
+            {item?.steps.map((step, index) => (
+              <Proceadure key={index + 1} step={step} stepOrder={index + 1} />
+            ))}
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-const TimingRecipe = () => {
+const TimingRecipe = ({ item }) => {
   return (
     <>
       <div className="flex-1 text-center">
@@ -19,7 +19,7 @@ const TimingRecipe = () => {
           <path d="M12 7v5l3 3" />
         </svg>
         <h3 className="font-medium text-lg text-gray-700 mt-2">Prep time</h3>
-        <p className="text-gray-500 text-sm">30 minutes</p>
+        <p className="text-gray-500 text-sm">{item?.totalTime}</p>
       </div>
       <div className="flex-1 text-center">
         <svg
@@ -40,7 +40,7 @@ const TimingRecipe = () => {
           <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
         </svg>
         <h3 className="font-medium text-lg text-gray-700 mt-2">Cook time</h3>
-        <p className="text-gray-500 text-sm">1 hour</p>
+        <p className="text-gray-500 text-sm">{item?.activeTime}</p>
       </div>
       <div className="flex-1 text-center">
         <svg

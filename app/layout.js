@@ -1,5 +1,6 @@
 import Navbar from '@/components/header/Navbar';
 import { connectDB } from '@/data/connectDb';
+import { AuthProvider } from '@/providers/authProvider';
 import { mongoUrl } from '@/secret';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -16,9 +17,10 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-
-        <main> {children}</main>
+        <AuthProvider>
+          <Navbar />
+          <main> {children}</main>
+        </AuthProvider>
       </body>
     </html>
   );
