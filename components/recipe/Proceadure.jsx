@@ -1,6 +1,6 @@
 const Proceadure = () => {
   return (
-    <div class="step">
+    <div className="step">
       <h3>Step 1</h3>
       <p>
         Labour, of evaluated would he the a the our what is in the arduous sides

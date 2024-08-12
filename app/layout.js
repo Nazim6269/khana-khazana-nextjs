@@ -1,5 +1,6 @@
-import Hero from '@/components/header/Hero';
 import Navbar from '@/components/header/Navbar';
+import { connectDB } from '@/data/connectDb';
+import { mongoUrl } from '@/secret';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -10,7 +11,8 @@ export const metadata = {
   description: 'A simple recipes App',
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  await connectDB(mongoUrl);
   return (
     <html lang="en">
       <body className={inter.className}>
