@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import logoImage from '@/public/logo.png';
+import LogInAndOut from '../auth/LogInAndOut';
 
 const Navbar = () => {
   return (
@@ -24,8 +25,8 @@ const Navbar = () => {
             <Link href="/about">About us</Link>
           </li>
 
-          <li className="py-2 bg-[#eb4a36] px-6 rounded-md text-white content-center">
-            <Link href="/login">Login</Link>
+          <li className="py-2  px-6 rounded-md text-gray-500 content-center">
+            <LogInAndOut />
           </li>
         </ul>
       </div>

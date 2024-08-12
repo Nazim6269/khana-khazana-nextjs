@@ -1,9 +1,9 @@
-import RecipeList from '@/components/recipe/RecipeList';
+import Landing from '@/components/Landing';
 
 export default function Home() {
   return (
     <>
-      <RecipeList />
+      <Landing />
     </>
   );
 }
