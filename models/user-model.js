@@ -17,7 +17,11 @@ const userSchema = new Schema({
     required: true,
     type: String,
   },
+  favorites: {
+    required: false,
+    type: Array,
+  },
 });
 
 export const userModel =
-  mongoose.models.users ?? mongoose.model('users', userSchema);
+  mongoose?.models?.users ?? mongoose?.model('users', userSchema);

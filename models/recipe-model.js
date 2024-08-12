@@ -48,4 +48,4 @@ const recipeSchema = new Schema({
 });
 
 export const recipeModel =
-  mongoose.models.recipes ?? mongoose.model('recipes', recipeSchema);
+  mongoose?.models?.recipes ?? mongoose?.model('recipes', recipeSchema);

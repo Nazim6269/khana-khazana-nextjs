@@ -1,6 +1,11 @@
 'use server';
 
-import { createUser, findUserByCredentials } from '@/data/query';
+import {
+  createUser,
+  findUserByCredentials,
+  getItemById,
+  updateFavorite,
+} from '@/data/query';
 import { redirect } from 'next/navigation';
 
 const registerAction = async (formData) => {
@@ -28,4 +33,13 @@ const loginAction = async (formData) => {
     throw error;
   }
 };
-export { loginAction, registerAction };
+
+const addToFavoriteAction = async (itemId, auth) => {
+  // await getItemById(itemId);
+  // await findUserByCredentials({
+  //   email: auth?.email,
+  //   password: auth?.password,
+  // });
+  await updateFavorite(itemId, auth?.id);
+};
+export { addToFavoriteAction, loginAction, registerAction };
